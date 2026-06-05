@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Application - Pauley German Shepherds</title>
+    <!-- Referencing shared master layout style sheet file -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+    <div style="font-size: 1.5rem; font-family: Georgia, serif; font-weight: bold;">Pauley GSDs</div>
+    
+    <!-- Mobile Hamburger Toggle Menu Button Node -->
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    
+    <nav id="primary-navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="app-hero">
+    <h1>Adoption Application</h1>
+    <p style="max-width: 600px; margin: 0 auto;">We strive to ensure that Pauley GSDs go to fitting homes where they and their leaders will thrive and lead healthy lives together.</p>
+</section>
+
+<main class="app-container">
+<h3>Please complete the adoption application below carefully to help us match you with the right German Shepherd puppy.</h3><br>
+
+    <form action="https://formspree.io/f/mykakjqz" method="POST" target="_blank">
+        
+        <!-- SECTION 1: APPLICANT INFO -->
+        <fieldset class="form-section">
+            <legend>Contact Information</legend>
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="First Name" placeholder="John" required>
+                </div>
+                <div class="form-group half">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="Last Name" placeholder="Doe" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="street-address">Street Address *</label>
+                <input type="text" id="street-address" name="Street Address" placeholder="123 Main St" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group third">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="City" placeholder="Libertyville" required>
+                </div>
+                <div class="form-group third">
+                    <label for="state">State *</label>
+                    <input type="text" id="state" name="State" placeholder="IL" required>
+                </div>
+                <div class="form-group third">
+                    <label for="zip-code">Zip Code *</label>
+                    <input type="text" id="zip-code" name="Zip Code" placeholder="60048" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="Email Address" placeholder="johndoe@example.com" required>
+                </div>
+                <div class="form-group half">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="Phone Number" placeholder="(555) 555-5555" required>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- SECTION 2: LIVING ARRANGEMENTS -->
+        <fieldset class="form-section">
+            <legend>Living Arrangements</legend>
+            
+            <div class="form-group">
+                <label>Do you live in a: *</label>
+                <div class="radio-group-vertical">
+                    <label class="radio-label"><input type="radio" name="Dwelling Type" value="House" required> House</label>
+                    <label class="radio-label"><input type="radio" name="Dwelling Type" value="Condo/Apartment" required> Condo / Apartment</label>
+                    <label class="radio-label"><input type="radio" name="Dwelling Type" value="Townhouse" required> Townhouse</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Do you: *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Home Ownership" value="Own" required> Own</label>
+                    <label class="radio-label"><input type="radio" name="Home Ownership" value="Rent" required> Rent your home</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Does your property have a fully fenced in yard? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Fenced Yard" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Fenced Yard" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Do people from outside the home have access to your property? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Others With Access To The Property" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Others With Access To The Property" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group dependent-question">
+                <label>If yes, have they been informed there will be a dog on your property? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Others Accessing Property Are Informed" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Others Accessing Property Are Informed" value="No" required> No</label>
+                    <label class="radio-label"><input type="radio" name="Others Accessing Property Are Informed" value="N/A" checked required> Not Applicable (No access)</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- SECTION 3: HOUSEHOLD PROFILE -->
+        <fieldset class="form-section">
+            <legend>Household Profile & Commitments</legend>
+            
+            <div class="form-group">
+                <label>Are all adults in the home in agreement about adopting a puppy? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="All Adults Agreed About Adopting A Puppy" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="All Adults Agreed About Adopting A Puppy" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are household adults committed to being the primary caregiver for the new dog? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Adults Are Primary Caregivers" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Adults Are Primary Caregivers" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are there small children in the home? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Small Children in the Home" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Small Children in the Home" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group dependent-question">
+                <label>If yes, are they experienced with pets and/or prepared to learn to help care for a dog? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Children Experienced with Pets" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Children Experienced with Pets" value="No" required> No</label>
+                    <label class="radio-label"><input type="radio" name="Children Experienced with Pets" value="N/A" checked required> Not Applicable</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have other pets inside the home? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Other Pets in the Home" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Other Pets in the Home" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group dependent-question">
+                <label>If yes, are you confident the existing pets get along well with other pets? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Existing Pets Get Along With Other Pets" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Existing Pets Get Along With Other Pets" value="No" required> No</label>
+                    <label class="radio-label"><input type="radio" name="Existing Pets Get Along With Other Pets" value="N/A" checked required> Not Applicable</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have a relationship with a local veterinarian? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Relationship With Veterinarian" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Relationship With Veterinarian" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Do you intend to spay/neuter this pet? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Planning to Spay/Neuter" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Planning to Spay/Neuter" value="No" required> No</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- SECTION 4: PET CARE LOGISTICS -->
+        <fieldset class="form-section">
+            <legend>Care Logistics & Schedule</legend>
+            
+            <div class="form-group">
+                <label for="time-present">Where will the dog spend most of its time when you are home? *</label>
+                <select id="time-present" name="Where will dog be when owner is home" required>
+                    <option value="" disabled selected>-- Select an Option --</option>
+                    <option value="Crate">Crate</option>
+                    <option value="With me on leash">With me on leash</option>
+                    <option value="Free indoors">Free indoors</option>
+                    <option value="Free outdoors">Free outdoors</option>
+                    <option value="Outdoors in a kennel">Outdoors in a kennel</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Other">Other (Please explain below)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="home-alone-hours">How many hours per day will the dog be home alone? *</label>
+                <select id="home-alone-hours" name="How many hours per day will the dog be home alone?" required>
+                    <option value="" disabled selected>-- Select an Option --</option>
+                    <option value="1 to 2">1 to 2</option>
+                    <option value="2 to 4">2 to 4</option>
+                    <option value="4 to 6">4 to 6</option>
+                    <option value="6 to 8">6 to 8</option>
+                    <option value="More than 8">More than 8</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="time-alone">Where will the dog spend most of its time when it is home alone? *</label>
+                <select id="time-alone" name="Where will dog be when home alone?" required>
+                    <option value="" disabled selected>-- Select an Option --</option>
+                    <option value="Crate">Crate</option>
+                    <option value="Run of the house">Run of the house</option>
+                    <option value="Indoor/outdoor (doggy door)">Indoor / outdoor (doggy door)</option>
+                    <option value="Outdoors">Outdoors</option>
+                    <option value="Dedicated room indoors">Dedicated room indoors</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Other">Other (Please explain below)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="time-night">Where will the dog sleep at night? *</label>
+                <select id="time-night" name="Where will dog sleep at night?" required>
+                    <option value="" disabled selected>-- Select an Option --</option>
+                    <option value="Crate">Crate</option>
+                    <option value="Run of the house">Run of the house</option>
+                    <option value="Indoor/outdoor (doggy door)">Indoor / outdoor (doggy door)</option>
+                    <option value="Outdoors">Outdoors</option>
+                    <option value="Dedicated room indoors">Dedicated room indoors</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Other">Other (Please explain below)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="logistics-explanation">If you selected "Other" for any care & scheduling questions above, please explain here: *</label>
+                <textarea id="logistics-explanation" name="Additional notes about care and logistics" placeholder="Write 'N/A' if not applicable..." required></textarea>
+            </div>
+        </fieldset>
+
+        <!-- SECTION 5: EXPERIENCE & BREED TRAINING -->
+        <fieldset class="form-section">
+            <legend>Experience & Breed Preparedness</legend>
+            
+            <div class="form-group">
+                <label for="dog-experience">How would you describe your experience with dogs? *</label>
+                <select id="dog-experience" name="Level of experience with dogs" required>
+                    <option value="" disabled selected>-- Select an Option --</option>
+                    <option value="I have had dogs of my own as an adult">I have had dogs of my own as an adult</option>
+                    <option value="I have lived with dogs but never as the primary caregiver">I have lived with dogs but never as the primary caregiver</option>
+                    <option value="I have never had my own dog and my experience is limited">I have never had my own dog and my experience is limited</option>
+                    <option value="Other">Other (Please explain below)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="experience-explanation">If you selected "Other" for experience or want to clarify your background, please explain here: *</label>
+                <textarea id="experience-explanation" name="Additional notes about experience" placeholder="Write 'N/A' if not applicable..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Do you understand that German Shepherds are a powerful working breed? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Understand GSDs are powerful working breed" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Understand GSDs are powerful working breed" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are you prepared to provide structured daily physical exercise, including at least two miles walking? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Committed to providing physical exercise" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Committed to providing physical exercise" value="No" required> No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are you prepared to provide structured daily mental exercise, including at least four five-minute sessions of positive reinforcement behavioral training activities (e.g. Sit, Down, Stay, Off)? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Committed to providing mental exercise and training" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Committed to providing mental exercise and training" value="No" required> No</label>
+                </div>
+
+		<div class="form-group">
+		   <label>Do you plan to sign up for puppy training/handling classes, with a local trainer or pet store? *</label>
+                <div class="radio-group-horizontal">
+                    <label class="radio-label"><input type="radio" name="Signing up for training classes" value="Yes" required> Yes</label>
+                    <label class="radio-label"><input type="radio" name="Signing up for training classes" value="No" required> No</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- ACTION CONTROLS PANEL -->
+        <div class="form-button-group">
+            <button type="submit" class="app-btn-submit" style="width: 235px;">Submit</button>
+            <button type="reset" class="app-btn-reset" style="width: 235px;">Reset Application</button>
+        </div>
+
+    </form>
+</main>
+
+<footer>
+    <p style="margin-bottom: 20px;">Located in Lake County, Illinois</p>
+    <div class="footer-links">
+        <a href="about.html">About Us</a> | <a href="gallery.html">Photo Gallery</a> | <a href="contact.html">Contact</a>
+    </div>
+    <div class="newsletter-box" style="margin-top: 30px;">
+        <p style="margin-bottom: 15px; color: #7688a4;">Sign up to receive important updates and new litter announcements:</p>
+        <form action="https://formspree.io/f/mvznzrjq" method="POST" target="_blank" class="newsletter-form">
+            <input type="text" name="name" placeholder="Your full name" required style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.08); color: white; width: 250px; box-sizing: border-box;">
+            
+            <input type="email" name="email" placeholder="Your email address" required style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.08); color: white; width: 250px; box-sizing: border-box;">
+            
+            <button type="submit" style="padding: 16px 32px; background: #c38e55; border: none; color: white; cursor: pointer; border-radius: 8px; font-weight: bold;">Sign Up</button>
+        </form>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById("mobile-nav-toggle");
+        const navMenu = document.getElementById("primary-navigation");
+        
+        if (toggleBtn && navMenu) {
+            toggleBtn.addEventListener("click", function(e) {
+                e.stopPropagation();
+                toggleBtn.classList.toggle("active");
+                navMenu.classList.toggle("open");
+            });
+            
+            // Close navigation on clicking anywhere outside
+            document.addEventListener("click", function(e) {
+                if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    toggleBtn.classList.remove("active");
+                    navMenu.classList.remove("open");
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

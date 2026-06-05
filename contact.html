@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pauley German Shepherds</title>
+    <!-- Referencing the shared master style sheet file -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+    <div style="font-size: 1.5rem; font-family: Georgia, serif; font-weight: bold;">Pauley GSDs</div>
+    
+    <!-- Mobile Hamburger Toggle Menu Button Node -->
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    
+    <nav id="primary-navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-hero">
+    <h1>Contact Us</h1>
+    <p style="color: #e0e1dd; margin-top: 10px; font-size: 1.1rem;">Have questions about our puppies, future litters, or anything else? </p>
+</section>
+
+<main class="contact-container">
+    <div class="contact-intro">
+        <p>Please fill out the form below to request additional information. We will respond to you directly within 3 business days.</p>
+    </div>
+
+    <!-- Contact Request Form Integrated with Formspree Service -->
+    <form action="https://formspree.io/f/mjgdgrdd" method="POST" target="_blank">
+        
+        <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" name="name" placeholder="Your first and last name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email-address">Email Address *</label>
+            <input type="email" id="email-address" name="email" placeholder="example@domain.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone-number">Phone Number (Optional)</label>
+            <input type="tel" id="phone-number" name="phone" placeholder="(555) 555-5555">
+        </div>
+
+        <div class="form-group">
+            <label for="form-message">Message *</label>
+            <textarea id="form-message" name="message" placeholder="How may we help you? Please share your interests here and we will contact you promptly." required></textarea>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-submit">Send Message</button>
+            <button type="reset" class="btn-reset">Clear Form</button>
+        </div>
+
+    </form>
+</main>
+
+<footer>
+	  <div>
+            <a href="application.html" class="btn btn-primary">I'm Ready to Adopt!</a>
+        </div>
+    <p style="margin-bottom: 20px;">Located in Lake County, Illinois</p>
+    <div class="footer-links">
+        <a href="about.html">About Us</a> | <a href="gallery.html">Photo Gallery</a> | <a href="contact.html">Contact</a>
+    </div>
+    <div class="newsletter-box">
+        <p style="margin-bottom: 15px;">Sign up to receive important updates and new litter announcements:</p>
+        <form action="https://formspree.io/f/mvznzrjq" method="POST" target="_blank" class="newsletter-form">
+            <input type="text" name="Interested party:" placeholder="Your full name" required>
+            <input type="email" name="Their email address:" placeholder="Your email address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById("mobile-nav-toggle");
+        const navMenu = document.getElementById("primary-navigation");
+        
+        if (toggleBtn && navMenu) {
+            toggleBtn.addEventListener("click", function(e) {
+                e.stopPropagation();
+                toggleBtn.classList.toggle("active");
+                navMenu.classList.toggle("open");
+            });
+            
+            // Close navigation on clicking anywhere outside
+            document.addEventListener("click", function(e) {
+                if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    toggleBtn.classList.remove("active");
+                    navMenu.classList.remove("open");
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

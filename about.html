@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pauley German Shepherds</title>
+    <!-- Directly referencing the shared master style sheet file -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+    <div style="font-size: 1.5rem; font-family: Georgia, serif; font-weight: bold;">Pauley GSDs</div>
+    
+    <!-- Mobile Hamburger Toggle Menu Button Node -->
+    <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    
+    <nav id="primary-navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="about-hero">
+    <h1>A Lifelong Passion</h1>
+    <p style="color: #e0e1dd; margin-top: 10px; font-size: 1.1rem; max-width: 630px;">Our journey with German Shepherds began long before we became breeders. It is a story rooted in a deep, lifelong love for dogs, a commitment to genetic health, and a shared vision for producing exceptional companions.</p>
+</section>
+
+<main class="about-content-wrapper">
+    <h2>The Foundation of Our Love for Dogs</h2>
+    <p>Felicia’s connection to dogs spans her entire life. As a toddler, she was practically raised alongside her sisters by a loyal German Shepherd who acted as a guardian and gentle companion. This early bond left an indelible mark. Later, as a teenager, Felicia poured hours into researching the "perfect" dog and brought home a Golden Retriever. Sadly, that beloved pet suffered from severe skin conditions and ultimately succumbed to cancer—a heartbreaking experience that deeply instilled in Felicia the vital importance of responsible breeding and rigorous health standards.
+
+Alex’s passion for the German Shepherd breed ignited while living with his sister, who was working at a prominent German Shepherd kennel and training facility in Wonder Lake, Illinois. Spending hours visiting the kennel and helping his sister, Alex was awestruck by the sheer beauty, power, loyalty, and profound affection these dogs exuded.
+    </p>
+
+    <h2>A Shared Vision and a Gift that Changed Everything</h2>
+    <p>Alex and Felicia met in their early twenties while living in the same neighborhood. It didn't take long for them to realize they shared a similar devotion to dogs—especially the German Shepherd.
+
+When Alex proposed, his father knew how much German Shepherds meant to the couple, and as a wedding present, he gifted them <strong>Rambo</strong>.
+
+Rambo quickly became the center of their world. With his calm, loving temperament, striking physical traits, and flawless genetic health, he surpassed every expectation. He was everything a German Shepherd should be, and he naturally became the foundational Sire for the Pauley's breeding program.</p>
+    <p>
+        Driven by their experience with Rambo and a desire to share this incredible breed with others, Alex and Felicia sought out the perfect match. They welcomed <strong>Roxy</strong>, their foundational Dam, chosen with the utmost care to complement Rambo’s exceptional qualities.
+    </p>
+<h2>Building for the Future</h2>
+    <p>We firmly believe that a dog's mind is just as critical as its physical build. Because of this, our breeding selections prioritize two uncompromised metrics: <strong>great, stable temperaments</strong> and a <strong>clear verifiable health history</strong>. This foundational care translates directly down the line, providing families with predictable companions equipped with balanced drives, sound nerves, and lifelong robustness. Together, Rambo and Roxy form the bedrock of our program.
+    </p>
+    <p>
+        <strong>Our mission:</strong> To ethically breed sound, healthy, and stable German Shepherds, producing the ultimate working family dogs for our community and beyond.</p>
+
+    <!-- Interactive Social Links Segment Container -->
+    <div class="social-link-section">
+        <h3 style="font-family: Georgia, serif; color: #0d1b2a; margin: 0; font-size: 1.3rem;">Follow Our Journey</h3>
+        <p style="color: #666; font-size: 0.95rem; margin-top: 5px; margin-bottom: 20px; text-align: center;">Connect with us online to check out our lives with the pups</p>
+        <div class="social-grid">
+            <a href="https://www.facebook.com/p/Pauley-German-Shepherds-61580031863646/" target="_blank" class="social-btn fb">Facebook</a>
+            <a href="https://www.instagram.com/pauleygermanshepherds?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-btn ig">Instagram</a>
+            <a href="https://www.puppies.com/breeders/pauleygsd" target="_blank" class="social-btn pup">Puppies.com</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div>
+        <a href="application.html" class="btn btn-primary">I'm Ready to Adopt!</a>
+    </div>
+    <p style="margin-bottom: 20px;">Located in Lake County, Illinois</p>
+    <div class="footer-links">
+        <a href="about.html">About Us</a> | <a href="gallery.html">Photo Gallery</a> | <a href="contact.html">Contact</a>
+    </div>
+    <div class="newsletter-box" style="margin-top: 30px;">
+        <p style="margin-bottom: 15px; color: #7688a4;">Sign up to receive important updates and new litter announcements:</p>
+        <form action="https://formspree.io/f/mvznzrjq" method="POST" target="_blank" class="newsletter-form">
+            <input type="text" name="name" placeholder="Your full name" required style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.08); color: white; width: 250px; box-sizing: border-box;">
+            
+            <input type="email" name="email" placeholder="Your email address" required style="padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.08); color: white; width: 250px; box-sizing: border-box;">
+            
+            <button type="submit" style="padding: 16px 32px; background: #c38e55; border: none; color: white; cursor: pointer; border-radius: 8px; font-weight: bold;">Sign Up</button>
+        </form>
+    </div>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById("mobile-nav-toggle");
+        const navMenu = document.getElementById("primary-navigation");
+        
+        if (toggleBtn && navMenu) {
+            toggleBtn.addEventListener("click", function(e) {
+                e.stopPropagation();
+                toggleBtn.classList.toggle("active");
+                navMenu.classList.toggle("open");
+            });
+            
+            // Close navigation on clicking anywhere outside
+            document.addEventListener("click", function(e) {
+                if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    toggleBtn.classList.remove("active");
+                    navMenu.classList.remove("open");
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
